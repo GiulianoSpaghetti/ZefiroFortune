@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="ZefiroFortune.Android/ZefiroFortune.Android.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="ZefiroFortune.Browser/ZefiroFortune.Browser.csproj" />
+  <Project Path="ZefiroFortune.Desktop/ZefiroFortune.Desktop.csproj" />
+  <Project Path="ZefiroFortune.iOS/ZefiroFortune.iOS.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="ZefiroFortune/ZefiroFortune.csproj" />
+</Solution>
