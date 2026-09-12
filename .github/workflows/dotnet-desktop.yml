@@ -1,0 +1,34 @@
+name: .NET AVALONIA Build
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    env:
+      Solution_Name: ZefiroFortune.slnx
+      Configuration: ${{ matrix.configuration }}
+
+    steps:
+    - uses: actions/checkout@v7
+    
+    - name: setup dotnet
+      uses: actions/setup-dotnet@v5
+      with: 
+         dotnet-version: '10.0.x'
+    - run: dotnet build ZefiroFortune.Desktop/ZefiroFortune.Desktop.csproj -r win-arm64
+    
+    - uses: actions/upload-artifact@v7
+      with:
+        name: App
+        path:  ZefiroFortune.Desktop/bin/Release/net10.0-windows10.0.26100.0
+        include-hidden-files: true
+        if-no-files-found: error
