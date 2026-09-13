@@ -4,6 +4,9 @@ using System.Reactive;
 using Avalonia.Threading;
 using ReactiveUI;
 using Zafiro.UI.Shell.Utils;
+using Zafiro.Avalonia.Dialogs;
+using Zafiro.Avalonia.Services;
+using Zafiro.Avalonia.Dialogs.Implementations;
 
 namespace ZefiroFortune.Sections
 {
@@ -48,7 +51,8 @@ namespace ZefiroFortune.Sections
             }
             catch (Exception ex)
             {
-                Cookie = ex.Message;
+                IDialog d = DialogService.Create();
+                d.ShowOk(ex.Message, "Errore");
                 Continua = false;
             }
             rnd = new();
@@ -75,7 +79,7 @@ namespace ZefiroFortune.Sections
                 }
                 catch (Exception ex2)
                 {
-                    Cookie = ex.Message;
+                    App.Notifications.Show(ex2.Message, "Errore");
                     Continua = false;
                 }
             }

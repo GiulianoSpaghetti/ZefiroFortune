@@ -6,12 +6,15 @@ using Serilog;
 using Zafiro.Avalonia.Controls.Shell;
 using Zafiro.Avalonia.Icons;
 using Zafiro.Avalonia.Misc;
+using Zafiro.Avalonia.Services;
 using Zafiro.UI.Shell;
 
 namespace ZefiroFortune
 {
     public class App : Application
     {
+        public static NotificationService Notifications { get; private set; }
+
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
@@ -20,7 +23,7 @@ namespace ZefiroFortune
         public override void OnFrameworkInitializationCompleted()
         {
             IconControlProviderRegistry.Register(new OptrisIconControlProvider(), asDefault: true);
-
+            Notifications = new NotificationService();
             var logger = new LoggerConfiguration()
                 .WriteTo.Console()
                 .CreateLogger();

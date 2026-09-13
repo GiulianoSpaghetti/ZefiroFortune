@@ -16,6 +16,8 @@
         <PackageReference Include="ReactiveUI.Avalonia" />
 
         <PackageReference Include="Zafiro.Avalonia" />
+
+        <PackageReference Include="Zafiro.Avalonia.Dialogs" />
         <PackageReference Include="Zafiro.Avalonia.Icons.Optris" />
         <PackageReference Include="Zafiro.Avalonia.Generators">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
