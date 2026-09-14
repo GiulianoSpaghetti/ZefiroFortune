@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net10.0-android</TargetFramework>
-        <SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+        <TargetFramework>net10.0-android36.1</TargetFramework>
+        <SupportedOSPlatformVersion>29.0</SupportedOSPlatformVersion>
         <AndroidMinSdkVersion>23</AndroidMinSdkVersion>
         <Nullable>enable</Nullable>
         <ApplicationId>org.altervista.numerone.fortune.zefiro</ApplicationId>
@@ -11,6 +11,8 @@
         <AndroidPackageFormat>apk</AndroidPackageFormat>
         <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
         <IsPackable>false</IsPackable>
+        <RuntimeIdentifiers>android-x64;android-arm64</RuntimeIdentifiers>
+	<AndroidSdkBuildToolsVersion>37.0.0</AndroidSdkBuildToolsVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
@@ -34,8 +36,19 @@
 
     <ItemGroup>
         <PackageReference Include="Avalonia.Android" />
+        <PackageReference Include="HarfBuzzSharp" />
+        <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" />
+        <PackageReference Include="HarfBuzzSharp.NativeAssets.WebAssembly" />
         <PackageReference Include="ReactiveUI.Avalonia" />
+        <PackageReference Include="SkiaSharp" />
+        <PackageReference Include="SkiaSharp.NativeAssets.Linux" />
+        <PackageReference Include="SkiaSharp.NativeAssets.WebAssembly" />
         <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" />
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common.Jvm" />
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" />
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.Process" />
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel" />
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModelSavedState" />
     </ItemGroup>
 
     <ItemGroup>

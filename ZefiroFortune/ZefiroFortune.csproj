@@ -12,8 +12,14 @@
         <PackageReference Include="Avalonia" />
         <PackageReference Include="Avalonia.Themes.Fluent" />
         <PackageReference Include="Avalonia.Fonts.Inter" />
+        <PackageReference Include="HarfBuzzSharp" />
+        <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" />
+        <PackageReference Include="HarfBuzzSharp.NativeAssets.WebAssembly" />
         <PackageReference Include="MySqlConnector" />
         <PackageReference Include="ReactiveUI.Avalonia" />
+        <PackageReference Include="SkiaSharp" />
+        <PackageReference Include="SkiaSharp.NativeAssets.Linux" />
+        <PackageReference Include="SkiaSharp.NativeAssets.WebAssembly" />
 
         <PackageReference Include="Zafiro.Avalonia" />
 
