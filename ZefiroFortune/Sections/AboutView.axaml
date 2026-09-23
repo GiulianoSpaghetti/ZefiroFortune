@@ -1,4 +1,4 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+<ContentPage xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:sections="clr-namespace:ZefiroFortune.Sections"
              x:Class="ZefiroFortune.Sections.AboutView" x:DataType="sections:AboutViewModel">
@@ -11,4 +11,4 @@
 		<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Puoi provare a dire nel microfono 'Leggimi un cookie' oppure 'Condividi un cookie sull'internet semantico della mia dolce metà'.</TextBlock>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">https://github.com/GiuianoSpaghetti/ZefiroFortune</TextBlock>
     </StackPanel>
-</UserControl>
+</ContentPage>
