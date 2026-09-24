@@ -5,7 +5,7 @@ using Zafiro.UI.Shell.Utils;
 
 namespace ZefiroFortune.Sections
 {
-    [Section(icon: "fa-circle-info", sortIndex: 1)]
+    [Section(icon: "fa-info", sortIndex: 1)]
     public class AboutViewModel
     {
     }

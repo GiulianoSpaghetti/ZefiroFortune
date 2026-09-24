@@ -10,7 +10,7 @@ using Zafiro.Avalonia.Dialogs.Implementations;
 
 namespace ZefiroFortune.Sections
 {
-    [Section(icon: "fa-home", sortIndex: 0)]
+    [Section(icon: "fa-houzz", sortIndex: 0)]
     public class HomeViewModel: ReactiveObject
     {
         internal MySqlConnector.MySqlConnection conn;
@@ -25,7 +25,7 @@ namespace ZefiroFortune.Sections
         private readonly int millisecondi = 1000;
         public String Message
         {
-            get => $"Per ottenere un doppione cliccare sul pulsante \"Ottieni un nuovo Biscotto\" per {max} volte.";
+            get => $"Per ottenere un doppione cliccare sul pulsante per {max} volte.";
         }
         public string Cookie
         {

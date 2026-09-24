@@ -1,10 +1,11 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+<ContentPage xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:sections="clr-namespace:ZefiroFortune.Sections"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
              x:Class="ZefiroFortune.Sections.HomeView" x:DataType="sections:HomeViewModel">
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="8">
 	    <TextBox TextWrapping="Wrap" AcceptsReturn="true" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="false" Text="{Binding Cookie}"/>
-		<Button Content="Ottieni un nuovo Biscotto" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding GetCookieCommand}" IsEnabled="{Binding Continua}"/>
+		<Button HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding GetCookieCommand}" IsEnabled="{Binding Continua}" i:Attached.Icon="fa-solid fa-cookie"/>
 		<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Message}"/>
     </StackPanel>
-</UserControl>
+</ContentPage>
