@@ -23,9 +23,8 @@ jobs:
     - name: setup dotnet
       uses: actions/setup-dotnet@v6
       with: 
-       dotnet-version: '11.0.x'
-       dotnet-quality: 'preview'
-    - run: dotnet build ZefiroFortune.Desktop/ZefiroFortune.Desktop.csproj -r win-x64
+       dotnet-version: '10.0.x'
+    - run: dotnet build ZefiroFortune.Desktop/ZefiroFortune.Desktop.csproj -r win-x64 -p:UseMonoRuntime=false
     
     - uses: actions/upload-artifact@v7
       with:
