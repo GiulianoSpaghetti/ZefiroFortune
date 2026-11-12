@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
     <PropertyGroup>
         <TargetFramework>net11.0-browser</TargetFramework>
         <OutputType>Exe</OutputType>
@@ -10,9 +10,12 @@
 
     <ItemGroup>
         <PackageReference Include="Avalonia.Browser" />
+        <PackageReference Include="AvaloniaUI.DiagnosticsSupport" />
         <PackageReference Include="HarfBuzzSharp" />
         <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" />
         <PackageReference Include="HarfBuzzSharp.NativeAssets.WebAssembly" />
+        <PackageReference Include="MicroCom.Runtime" />
+        <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" />
         <PackageReference Include="ReactiveUI.Avalonia" />
         <PackageReference Include="SkiaSharp" />
         <PackageReference Include="SkiaSharp.NativeAssets.Linux" />
